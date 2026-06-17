@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ariskarnezis.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://ariskarnezis.github.io/about</loc><priority>0.8</priority></url>
+
+  <url><loc>https://ariskarnezis.github.io/project/average-transmitted-wave-particulate-materials</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/calculating-pair-correlations</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/effective-waves-in-random-materials</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/optimising-monte-carlo</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/lidar-imu-pipe-material</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/lidar-pipe-detection</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/thz-superfocusing</loc><priority>0.7</priority></url>
+  <url><loc>https://ariskarnezis.github.io/project/quantum-hydro</loc><priority>0.7</priority></url>
+
+  <url><loc>https://ariskarnezis.github.io/article/effective-wavenumber-multiple-waves</loc><priority>0.6</priority></url>
+
+  <url><loc>https://ariskarnezis.github.io/blog/being-stuck-research</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/finding-balance-life-as-researcher</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/my-journey-into-research</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/books-that-changed-how-i-think</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/art-of-asking-good-questions</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/france-waves2022</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/glasgow-2021-pandemic</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/le-houches-alps-2020</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/tokyo-iciam-2023</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/cambridge-hackathon-2023</loc><priority>0.5</priority></url>
+  <url><loc>https://ariskarnezis.github.io/blog/why-i-started-writing</loc><priority>0.5</priority></url>
+</urlset>
