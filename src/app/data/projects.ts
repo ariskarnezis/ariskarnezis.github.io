@@ -207,6 +207,49 @@ By analysing reflection coefficients and deriving effective wavenumbers, this re
     ],
   },
   {
+    id: "lidar-imu-pipe-material",
+    title: "Probabilistic pipe material classification via LiDAR-IMU data fusion",
+    description:
+      "Developed a probabilistic Bayesian framework that fuses LiDAR intensity measurements with IMU-based joint detection to classify clay, concrete, and plastic pipes in underground sewer networks, achieving over 86% classification confidence across all materials.",
+    institution: "School of Electrical and Electronic Engineering, University of Sheffield",
+    period: "2026",
+    tags: [
+      "LiDAR",
+      "IMU",
+      "Bayesian Inference",
+      "Data Fusion",
+      "Pipe Inspection",
+    ],
+    image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb2JvdGljcyUyMHNlbnNvciUyMGZ1c2lvbiUyMGRhdGF8ZW58MXx8fHwxNzMzMDk0MjAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    pdfDownload: "https://drive.proton.me/urls/3B0F0TV96R#kBlmEBfprglS",
+    pdfTitle: " ",
+    status: "Completed",
+    detailedDescription: `This research addresses a fundamental challenge in underground infrastructure management: reliable identification of pipe material type. In many sewer systems, pipes have been installed, repaired, and extended over decades, creating heterogeneous networks containing vitrified clay, concrete, and plastic pipes. Accurate material identification is essential for asset management, informing rehabilitation strategy selection, estimating remaining service life, and prioritizing maintenance budgets.
+
+The work presents a probabilistic framework that combines two complementary sensing modalities already present on inspection robots. LiDAR intensity measurements capture optical reflectance characteristics at infrared wavelengths, while IMU sensors detect mechanical perturbations as the robot crosses pipe joints. By fusing these independent information sources through Bayesian inference, the system achieves robust classification without requiring additional hardware or dedicated inspection passes.`,
+    objectives: [
+      "Develop a LiDAR intensity normalisation approach that accounts for range and scan angle effects in cylindrical pipe geometry, producing material-sensitive residuals",
+      "Create an IMU-based method that detects pipe joints and interprets inter-joint distances as evidence for material type, accounting for missed detections",
+      "Design a unified Bayesian framework that combines both modalities through log-domain fusion with adjustable weighting",
+      "Validate the approach across single-material sewer networks, demonstrating that fusion improves classification confidence relative to either modality alone",
+      "Establish a probabilistic classification system that produces calibrated posterior probabilities without requiring additional sensing hardware beyond standard inspection payloads",
+    ],
+    methodology:
+      "The framework uses a shared Bayesian formulation applied to both sensing modalities. For LiDAR, raw intensity measurements are normalised using a bivariate polynomial model fitted across all materials to remove geometric effects of range and scan angle. The resulting residuals are material-sensitive, and their distributions are captured using kernel density estimation (KDE). For IMU, mechanical perturbations in the pitch axis are detected at pipe joints, and the distances between consecutive joints are compared with expected segment lengths for each material. A mixture model allows long gaps to represent missed joints when they are close to integer multiples of expected segment length, while unreliable gaps are down-weighted. Both modalities share uniform priors and are combined in the log domain using mean log-likelihoods with an adjustable modality weight, producing calibrated posterior probabilities over material classes.",
+    results: [
+      "Developed a geometric normalisation method for LiDAR intensity that produces material-sensitive residuals suited to cylindrical pipe environments",
+      "Created a probabilistic joint-distance model that gracefully handles missed detections and unreliable measurements through a mixture framework",
+      "Achieved 93.5% posterior confidence for concrete classification, improving from 59.9% (LiDAR alone) and 73.8% (IMU alone)",
+      "Achieved 93.5% posterior confidence for clay classification, improving from 49.4% (LiDAR alone) and 86.5% (IMU alone)",
+      "Achieved 86.2% posterior confidence for plastic classification, improving from 58.3% (LiDAR alone) and 69.0% (IMU alone)",
+      "Demonstrated that fusion increases classification confidence relative to either single modality in all test cases, resolving ambiguities through complementary failure modes",
+      "Established a framework that leverages existing inspection robot sensors without requiring additional hardware modifications",
+    ],
+    publications: [
+      "Published (2026): 'Probabilistic Pipe Material Classification via LiDAR-IMU Data Fusion' https://drive.proton.me/urls/3B0F0TV96R#kBlmEBfprglS",
+    ],
+  },
+  {
     id: "lidar-pipe-detection",
     title: "Feature detection and classification in buried pipes using LiDAR technology",
     description:
