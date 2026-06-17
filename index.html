@@ -1,21 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aris Karnezis | Research Associate</title>
+    <meta
+      name="description"
+      content="Aris Karnezis — research portfolio. Publications, projects, and articles."
+    />
+    <meta name="author" content="Aris Karnezis" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ariskarnezis.github.io/" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Personal Research Website</title>
-      <meta name="description" content="Showcases research projects with detailed descriptions and key information, enhancing visibility and accessibility for academic and professional audiences." />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aris Karnezis | Research Associate" />
+    <meta
+      property="og:description"
+      content="Research portfolio. Publications, projects, and articles."
+    />
+    <meta property="og:url" content="https://ariskarnezis.github.io/" />
+    <meta property="og:site_name" content="Aris Karnezis" />
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aris Karnezis | Research Associate" />
+    <meta
+      name="twitter:description"
+      content="Research portfolio. Publications, projects, and articles."
+    />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aris Karnezis",
+        "alternateName": "Aristeidis Karnezis",
+        "url": "https://ariskarnezis.github.io/",
+        "jobTitle": "Researcher",
+        "knowsAbout": [
+          "Wave propagation",
+          "Random particulate materials",
+          "Effective medium theory",
+          "LiDAR",
+          "Acoustics"
+        ]
+      }
+    </script>
+
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
