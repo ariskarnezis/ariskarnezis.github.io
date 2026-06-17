@@ -1,5 +1,7 @@
 
-  # Personal Research Website
+  # Personal Website
+  
+  This is my personal website.
 
   ## Running the code
 
