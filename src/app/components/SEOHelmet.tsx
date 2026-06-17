@@ -11,7 +11,7 @@ interface SEOHelmetProps {
 }
 
 export function SEOHelmet({
-  title = "Research Associate",
+  title = "AK | Researcher",
   description = "Professional academic website showcasing research in wave scattering, random media, and effective medium theory. Explore publications, projects, and insights from a Research Associate at the University of Sheffield.",
   image = "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=630&fit=crop",
   type = 'website',
