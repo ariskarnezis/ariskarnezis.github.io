@@ -1,7 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-family-base: 'Mandali', sans-serif;
+  --font-family-base: 'DM Sans', sans-serif;
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
