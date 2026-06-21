@@ -88,15 +88,16 @@ For anyone modelling waves, designing materials, or interpreting experiments, kn
 
 Understanding these subtleties doesn't just refine our theories — it opens new ways to engineer materials with specific wave properties. And that, ultimately, is what makes this work worth doing.`,
   },
-  {
-    id: "how-shazam-recognises-a-song",
-    title: "How Shazam Recognises a Song from Just a Few Seconds",
-    excerpt: "Shazam can identify a song from a short, noisy recording. The trick is not magic, but signal processing: turning sound into a map, finding landmarks, and matching the pattern.",
-    date: "June 21, 2026",
-    readTime: "7 min read",
-    category: "Signal Processing",
-    tags: ["FFT", "Audio Fingerprinting", "Spectrograms", "Signal Processing"],
-    content: `You are in a café, half-listening to the music in the background. People are talking, cups are clinking, and the song is coming from a speaker that has probably seen better days. You open Shazam, hold up your phone for a few seconds, and the app tells you the name of the track.
+];
+{
+id: "how-shazam-recognises-a-song",
+title: "How Shazam Recognises a Song from Just a Few Seconds",
+excerpt: "Shazam can identify a song from a short, noisy recording. The trick is not magic, but signal processing: turning sound into a map, finding landmarks, and matching the pattern.",
+date: "June 21, 2026",
+readTime: "7 min read",
+category: "Signal Processing",
+tags: ["FFT", "Audio Fingerprinting", "Spectrograms", "Signal Processing"],
+content: `You are in a café, half-listening to the music in the background. People are talking, cups are clinking, and the song is coming from a speaker that has probably seen better days. You open Shazam, hold up your phone for a few seconds, and the app tells you the name of the track.
 
 It feels almost unfairly fast. The recording your phone hears is not clean. It is mixed with voices, room echo, and background noise. It may start halfway through the chorus or in the middle of an instrumental section. Yet the app can still identify the song.
 
@@ -118,7 +119,7 @@ Frequency means how fast something vibrates. A slow vibration is heard as a deep
 
 An orchestra is a good way to picture this. When an orchestra plays, the sound reaches us as one mixture, but that mixture has many contributors. The double bass adds deep vibrations. The violins add faster ones. The drums create short, sharp bursts. Your ear does not receive each instrument as a separate file; it receives the combined sound. Still, you can sense that the sound has ingredients.
 
-The song playing in the café is no different in principle. It may not be a classical orchestra, but it is still a mixture: vocals, bass, drums, guitar, synths, room echo, and background noise all arriving at your phone's microphone at once. To Shazam, this café recording is one tangled signal. The useful question is not what the waveform looks like, but what ingredients are hidden inside it.
+The song playing in the café is no different in principle. It may not be a classical orchestra, but it is still a mixture: vocals, bass, drums, guitar, synths, room echo, and background noise all arriving at your phone’s microphone at once. To Shazam, this café recording is one tangled signal. The useful question is not what the waveform looks like, but what ingredients are hidden inside it.
 
 A computer needs a mathematical way to reveal those ingredients. This is where the Fast Fourier Transform, or FFT, comes in. The FFT takes a short piece of sound and shows what kinds of vibrations are present in it. It does not know what a violin is. It does not understand melody. It simply tells us how much energy appears at different vibration speeds.
 
@@ -149,5 +150,4 @@ That is the broader lesson. A signal that first looks messy may still contain a 
 This is why I think Shazam is such a good example of explainable science. It takes something familiar and reveals the deeper idea underneath. A few seconds of noisy audio become a sound map. The map reveals landmarks. The landmarks form a fingerprint. The fingerprint points back to a song.
 
 What feels like magic is really a change of perspective. The app is not hearing the music as we do. It is recognising the structure left behind by the sound. And once you see that, Shazam becomes more than a useful app. It becomes a small reminder that many complicated signals are understandable, if we learn how to look at them.`,
-  }
-];
+},
