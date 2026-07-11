@@ -165,98 +165,168 @@ What feels like magic is really a change of perspective. The app is not hearing 
       "Riemann Hypothesis",
       "Quantum Physics",
     ],
-    content: `Recently, I watched the television series *Prime Target*, which follows a mathematician searching for a hidden pattern in the prime numbers. The series turns this search into a global conspiracy: a mathematical discovery might be powerful enough to compromise digital security.
-  
-  The programme gave me the starting point for this article, but my reason for writing it is more personal. I am primarily a mathematician, and I have also studied quantum physics. Prime numbers lie at a fascinating meeting point between those subjects. They begin with a definition that can be understood at school, but they lead towards encryption, quantum algorithms, and one of the greatest unsolved problems in mathematics.
-  
-  The drama naturally takes liberties with the science. Even so, the mystery at its centre is real. After thousands of years of study, prime numbers continue to resist a complete explanation.
-  
-  ## What Is a Prime Number?
-  
-  A **prime number** is a whole number greater than 1 that can be divided exactly only by 1 and itself. The first few are 2, 3, 5, 7, 11, 13, 17, and 19.
-  
-  The number 7 is prime because its only positive divisors are 1 and 7. The number 12 is not prime because it can also be divided by 2, 3, 4, and 6. A number greater than 1 that is not prime is called **composite**.
-  
-  Prime numbers are often described as the building blocks of arithmetic. Every whole number greater than 1 can be written uniquely as a product of primes, apart from the order in which they appear. For example, 60 = 2 × 2 × 3 × 5. Breaking a number into these building blocks is called **prime factorisation**.
-  
-  This simple property gives primes a fundamental role in mathematics. Yet the places in which they appear along the number line are surprisingly difficult to predict.
-  
-  ## Why Are Prime Numbers So Mysterious?
-  
-  Euclid proved more than two thousand years ago that there are infinitely many primes. No matter how far we travel along the number line, another prime must eventually appear.
-  
-  What we do not have is a simple rule that efficiently tells us where every prime will occur. Sometimes primes appear close together, as 11 and 13 do. Elsewhere, larger gaps separate them. The sequence is completely determined, but it often looks irregular.
-  
-  Mathematicians do understand its broad behaviour. The **prime number theorem** estimates how many primes occur below a large number. If x is large, the number of primes below x is approximately x / log(x), where log is the natural logarithm. A logarithm reverses exponentiation, and log(x) grows slowly as x increases.
-  
-  This estimate becomes increasingly accurate as x grows. It tells us how the primes thin out on average, but not why a particular number is prime or exactly how large every local fluctuation will be. Understanding those fluctuations leads to the Riemann hypothesis.
-  
-  ## The Riemann Hypothesis
-  
-  The **Riemann hypothesis** is a famous unsolved statement about a function called the **Riemann zeta function**. A function is simply a mathematical rule that turns an input into an output.
-  
-  The zeta function is deeply connected to prime numbers. One way of writing it involves an infinite product containing every prime, which means that information about the entire prime sequence is encoded in its behaviour.
-  
-  To study the function fully, mathematicians use **complex numbers**. A complex number combines an ordinary real number with a multiple of i, where i is defined by i² = -1. Despite the historical word "imaginary", complex numbers are standard tools in engineering, signal processing, and quantum physics.
-  
-  A **zero** of a function is an input that makes its output equal to zero. The zeta function has a collection of important zeros known as the non-trivial zeros. Riemann proposed that every one of them lies on the same vertical line in the complex-number plane: the line whose real part is 1/2. This statement is the Riemann hypothesis.
-  
-  Why does that matter? The locations of these zeros control how much the actual distribution of primes can fluctuate around the average predicted by the prime number theorem. If the hypothesis is true, the apparent disorder of the primes is constrained by a remarkably precise hidden structure.
-  
-  Computers have checked enormous collections of zeros and found them on the expected line, but numerical evidence is not a proof. A proof must show that the claim holds for infinitely many cases.
-  
-  It is also important to separate this problem from the fictional premise of *Prime Target*. Proving the Riemann hypothesis would revolutionise number theory, but it would not automatically reveal every prime number or unlock every encrypted computer.
-  
-  ## Prime Numbers and Digital Security
-  
-  The connection between primes and cybersecurity is nevertheless genuine. A well-known example is **RSA**, a public-key cryptographic system.
-  
-  Public-key cryptography uses a pair of related keys. A public key can be shared openly, while a private key is kept secret. This allows people and computers to exchange protected information or verify digital signatures without first sharing the same secret key.
-  
-  RSA starts with two very large prime numbers and multiplies them together. Multiplication is easy for a computer. Reversing the process and recovering the original primes from their product is called **factorisation**, and no fast general classical method is known for the enormous numbers used in properly chosen RSA keys.
-  
-  A tiny example is 61 × 53 = 3233. Finding the factors of 3233 is manageable. The same task becomes far harder when the product contains hundreds of digits.
-  
-  The relevant mathematics often uses **modular arithmetic**, sometimes called clock arithmetic. On a twelve-hour clock, 10 + 5 leads to 3 rather than 15. We say that 15 and 3 are equivalent modulo 12 because they leave the same remainder when divided by 12.
-  
-  These ideas operate quietly in everyday technology. Cryptographic mathematics helps secure web connections, authenticate systems, protect transactions, and verify that software has not been altered.
-  
-  A new insight into the distribution of primes would not necessarily break these systems. To attack RSA directly, it would need to produce an efficient method for factoring the particular large numbers used in its keys. Discovering a pattern and turning it into a practical algorithm are very different achievements.
-  
-  ## The Quantum Connection
-  
-  Quantum computing creates a more concrete challenge. Ordinary computers use bits, each representing 0 or 1. Quantum computers use **qubits**, whose states can involve combinations of 0 and 1 until they are measured. Quantum algorithms manipulate these states so that useful outcomes become more likely.
-  
-  In 1994, Peter Shor discovered a quantum algorithm that can factor large integers far more efficiently than the best-known classical methods. A sufficiently large, reliable, fault-tolerant quantum computer could therefore threaten RSA and several other public-key systems.
-  
-  Fault-tolerant means that the machine can detect and correct the errors that naturally arise in fragile quantum states. Constructing quantum computers at the scale required by Shor's algorithm remains a major engineering challenge, but the algorithm has already motivated the development of **post-quantum cryptography**: methods designed to remain secure even against future quantum computers.
-  
-  There is also a subtler link between primes and quantum physics. The spacing between the non-trivial zeros of the zeta function resembles the statistical spacing between energy levels in certain quantum systems.
-  
-  An **energy spectrum** is the set of energy values that a quantum system is allowed to have. In systems associated with chaotic classical motion, these energy levels show distinctive statistical patterns. This field is known as **quantum chaos**.
-  
-  Similar patterns appear in **random-matrix theory**, which studies large arrays of numbers whose entries are chosen using probability. Random matrices have been used in physics to model complicated energy spectra, and their eigenvalue statistics unexpectedly resemble the statistics of the zeta zeros.
-  
-  An **eigenvalue** is a special value associated with a matrix or mathematical operator. In quantum physics, eigenvalues often represent the possible results of a measurement, such as the energy of a system.
-  
-  This resemblance has encouraged the idea that the zeta zeros may be the spectrum of some unknown quantum operator. No accepted physical system has yet been found, and the connection does not prove the Riemann hypothesis. It does, however, reveal an extraordinary bridge between number theory and quantum physics.
-  
-  ## From Pure Mathematics to Everyday Life
-  
-  For most of history, prime numbers were studied as pure mathematics. Euclid was not thinking about secure websites, and Riemann was not designing digital signatures. They were following questions that were mathematically compelling.
-  
-  Centuries later, those ideas became part of the infrastructure of modern life. This is one of the most important lessons of pure mathematics: its future applications are often impossible to predict.
-  
-  An abstract theory may appear impractical for generations. Then a new scientific or technological problem emerges and discovers that the required language already exists.
-  
-  Prime numbers now influence secure communications, online transactions, software authentication, computer algorithms, and the development of quantum-resistant security. Most people encounter the results without ever seeing the mathematics operating underneath.
-  
-  ## The Real Prime Target
-  
-  The most interesting question raised by *Prime Target* is not whether one mathematician could control every computer. It is why numbers with such a simple definition remain so difficult to understand.
-  
-  Prime numbers connect elementary arithmetic with infinity, cryptography, algorithms, and quantum physics. They are completely deterministic, yet their distribution often appears almost random. We understand their average behaviour, but some of their deepest structure remains hidden.
-  
-  As a mathematician who has studied quantum physics, that bridge between the simple and the profound is what inspired me to write this article. The television conspiracy is fiction, but the mathematical mystery is entirely real.`,
-  }
+content: `Recently, I watched the television series *Prime Target*, which follows a mathematician searching for a hidden pattern in the prime numbers.
+
+The series turns this search into a global conspiracy: a mathematical discovery might be powerful enough to compromise digital security.
+
+The programme gave me the starting point for this article, but my reason for writing it is more personal.
+
+I am primarily a mathematician, and I have also studied quantum physics. Prime numbers lie at a fascinating meeting point between those subjects. They begin with a definition that can be understood at school, but they lead towards encryption, quantum algorithms, and one of the greatest unsolved problems in mathematics.
+
+The drama naturally takes liberties with the science. Even so, the mystery at its centre is real. After thousands of years of study, prime numbers continue to resist a complete explanation.
+
+## What Is a Prime Number?
+
+A **prime number** is a whole number greater than 1 that can be divided exactly only by 1 and itself.
+
+The first few prime numbers are 2, 3, 5, 7, 11, 13, 17, and 19.
+
+The number 7 is prime because its only positive divisors are 1 and 7.
+
+The number 12 is not prime because it can also be divided by 2, 3, 4, and 6. A number greater than 1 that is not prime is called **composite**.
+
+Prime numbers are often described as the building blocks of arithmetic. Every whole number greater than 1 can be written uniquely as a product of primes, apart from the order in which they appear.
+
+For example, 60 = 2 × 2 × 3 × 5.
+
+Breaking a number into these building blocks is called **prime factorisation**.
+
+This simple property gives primes a fundamental role in mathematics. Yet the places in which they appear along the number line are surprisingly difficult to predict.
+
+## Why Are Prime Numbers So Mysterious?
+
+Euclid proved more than two thousand years ago that there are infinitely many primes.
+
+No matter how far we travel along the number line, another prime must eventually appear.
+
+What we do not have is a simple rule that efficiently tells us where every prime will occur.
+
+Sometimes primes appear close together, as 11 and 13 do. Elsewhere, larger gaps separate them. The sequence is completely determined, but it often looks irregular.
+
+Mathematicians do understand its broad behaviour.
+
+The **prime number theorem** estimates how many primes occur below a large number. If x is large, the number of primes below x is approximately x / log(x), where log is the natural logarithm.
+
+This estimate becomes increasingly accurate as x grows. It tells us how the primes thin out on average, but not why a particular number is prime or exactly how large every local fluctuation will be.
+
+Understanding those fluctuations leads to the Riemann hypothesis.
+
+## The Riemann Hypothesis
+
+The **Riemann hypothesis** is a famous unsolved statement about a function called the **Riemann zeta function**.
+
+A function is simply a mathematical rule that turns an input into an output.
+
+The zeta function is deeply connected to prime numbers. One way of writing it involves an infinite product containing every prime, which means that information about the entire prime sequence is encoded in its behaviour.
+
+To study the function fully, mathematicians use **complex numbers**.
+
+A complex number combines an ordinary real number with a multiple of i, where i is defined by i² = -1.
+
+Despite the historical word "imaginary", complex numbers are standard tools in engineering, signal processing, and quantum physics.
+
+A **zero** of a function is an input that makes its output equal to zero.
+
+The zeta function has a collection of important zeros known as the non-trivial zeros.
+
+Riemann proposed that every one of them lies on the same vertical line in the complex-number plane: the line whose real part is 1/2. This statement is the Riemann hypothesis.
+
+Why does that matter?
+
+The locations of these zeros control how much the actual distribution of primes can fluctuate around the average predicted by the prime number theorem.
+
+If the hypothesis is true, the apparent disorder of the primes is constrained by a remarkably precise hidden structure.
+
+Computers have checked enormous collections of zeros and found them on the expected line, but numerical evidence is not a proof. A proof must show that the claim holds for infinitely many cases.
+
+It is also important to separate this problem from the fictional premise of *Prime Target*. Proving the Riemann hypothesis would revolutionise number theory, but it would not automatically reveal every prime number or unlock every encrypted computer.
+
+## Prime Numbers and Digital Security
+
+The connection between primes and cybersecurity is genuine.
+
+A well-known example is **RSA**, a public-key cryptographic system.
+
+Public-key cryptography uses a pair of related keys. A public key can be shared openly, while a private key is kept secret.
+
+This allows people and computers to exchange protected information or verify digital signatures without first sharing the same secret key.
+
+RSA starts with two very large prime numbers and multiplies them together.
+
+Multiplication is easy for a computer. Reversing the process and recovering the original primes from their product is called **factorisation**, and no fast general classical method is known for the enormous numbers used in properly chosen RSA keys.
+
+A tiny example is 61 × 53 = 3233.
+
+Finding the factors of 3233 is manageable. The same task becomes far harder when the product contains hundreds of digits.
+
+The relevant mathematics often uses **modular arithmetic**, sometimes called clock arithmetic.
+
+On a twelve-hour clock, 10 + 5 leads to 3 rather than 15.
+
+These ideas operate quietly in everyday technology. Cryptographic mathematics helps secure web connections, authenticate systems, protect transactions, and verify that software has not been altered.
+
+A new insight into the distribution of primes would not necessarily break these systems.
+
+To attack RSA directly, it would need to produce an efficient method for factoring the particular large numbers used in its keys.
+
+Discovering a pattern and turning it into a practical algorithm are very different achievements.
+
+## The Quantum Connection
+
+Quantum computing creates a more concrete challenge.
+
+Ordinary computers use bits, each representing 0 or 1. Quantum computers use **qubits**, whose states can involve combinations of 0 and 1 until they are measured.
+
+In 1994, Peter Shor discovered a quantum algorithm that can factor large integers far more efficiently than the best-known classical methods.
+
+A sufficiently large, reliable quantum computer could therefore threaten RSA and several other public-key systems.
+
+Constructing machines at that scale remains a major engineering challenge, but the algorithm has already motivated the development of **post-quantum cryptography**: methods designed to remain secure even against future quantum computers.
+
+There is also a subtler link between primes and quantum physics.
+
+The spacing between the non-trivial zeros of the zeta function resembles the statistical spacing between energy levels in certain quantum systems.
+
+An **energy spectrum** is the set of energy values that a quantum system is allowed to have.
+
+Similar patterns also appear in **random-matrix theory**, which studies large arrays of numbers whose entries are chosen using probability.
+
+This resemblance has encouraged the idea that the zeta zeros may be the spectrum of some unknown quantum operator.
+
+No accepted physical system has yet been found, and the connection does not prove the Riemann hypothesis.
+
+It does, however, reveal an extraordinary bridge between number theory and quantum physics.
+
+## From Pure Mathematics to Everyday Life
+
+For most of history, prime numbers were studied as pure mathematics.
+
+Euclid was not thinking about secure websites, and Riemann was not designing digital signatures. They were following questions that were mathematically compelling.
+
+Centuries later, those ideas became part of the infrastructure of modern life.
+
+This is one of the most important lessons of pure mathematics: its future applications are often impossible to predict.
+
+An abstract theory may appear impractical for generations. Then a new scientific or technological problem emerges and discovers that the required language already exists.
+
+Prime numbers now influence secure communications, online transactions, software authentication, computer algorithms, and the development of quantum-resistant security.
+
+Most people encounter the results without ever seeing the mathematics operating underneath.
+
+## The Real Prime Target
+
+The most interesting question raised by *Prime Target* is not whether one mathematician could control every computer.
+
+It is why numbers with such a simple definition remain so difficult to understand.
+
+Prime numbers connect elementary arithmetic with infinity, cryptography, algorithms, and quantum physics.
+
+They are completely deterministic, yet their distribution often appears almost random.
+
+We understand their average behaviour, but some of their deepest structure remains hidden.
+
+As a mathematician who has studied quantum physics, that bridge between the simple and the profound is what inspired me to write this article.
+
+The television conspiracy is fiction, but the mathematical mystery is entirely real.`,
+}
 ];
