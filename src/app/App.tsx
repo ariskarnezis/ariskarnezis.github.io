@@ -11,6 +11,8 @@ import { Layout } from "./components/Layout";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { Analytics } from "./components/Analytics";
+import { PageTransition } from "./components/PageTransition";
+import { BackToTop } from "./components/BackToTop";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,11 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <HomePage />
+            <PageTransition>
+              <HomePage />
+            </PageTransition>
             <Footer />
+            <BackToTop />
           </>
         ),
       },
@@ -31,8 +36,11 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <AboutPage />
+            <PageTransition>
+              <AboutPage />
+            </PageTransition>
             <Footer />
+            <BackToTop />
           </>
         ),
       },
@@ -41,8 +49,11 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <ProjectDetail />
+            <PageTransition>
+              <ProjectDetail />
+            </PageTransition>
             <Footer />
+            <BackToTop />
           </>
         ),
       },
@@ -51,8 +62,11 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <BlogPostDetail />
+            <PageTransition>
+              <BlogPostDetail />
+            </PageTransition>
             <Footer />
+            <BackToTop />
           </>
         ),
       },
@@ -61,8 +75,11 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <ArticleDetail />
+            <PageTransition>
+              <ArticleDetail />
+            </PageTransition>
             <Footer />
+            <BackToTop />
           </>
         ),
       },
@@ -71,7 +88,9 @@ const router = createBrowserRouter([
         element: (
           <>
             <Navigation />
-            <NotFoundPage />
+            <PageTransition>
+              <NotFoundPage />
+            </PageTransition>
             <Footer />
           </>
         ),

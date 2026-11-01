@@ -96,7 +96,7 @@ export function Articles() {
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl mb-4 text-slate-900 dark:text-white">Explainable Science</h2>
-          <p className="text-xl text-slate-600 dark:text-white max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Deep dives into specific concepts, methods, and findings from my research areas
           </p>
         </div>
@@ -160,7 +160,7 @@ export function Articles() {
                     </h3>
                     
                     {/* Excerpt */}
-                    <p className="text-slate-600 dark:text-white mb-4 leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                       {article.excerpt}
                     </p>
                     

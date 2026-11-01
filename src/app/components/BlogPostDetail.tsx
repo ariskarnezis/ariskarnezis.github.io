@@ -7,6 +7,8 @@ import { ContentSidebar } from "./ContentSidebar";
 import { useMemo } from "react";
 import { Link } from "react-router";
 import { SEOHelmet } from "./SEOHelmet";
+import { ReadingProgress } from "./ReadingProgress";
+import { BlurImage } from "./BlurImage";
 
 // Helper function to parse markdown formatting (bold and italic)
 function parseMarkdown(text: string): (string | JSX.Element)[] {
@@ -166,6 +168,7 @@ export function BlogPostDetail() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#2d2d2d] pt-16">
+      <ReadingProgress />
       <SEOHelmet
         title={`${post.title} | Blog`}
         description={post.excerpt}
@@ -202,7 +205,7 @@ export function BlogPostDetail() {
                 {post.title}
               </h1>
               
-              <p className="text-xl text-slate-600 dark:text-white mb-6 leading-relaxed">
+              <p className="text-xl text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 {post.excerpt}
               </p>
               
@@ -229,10 +232,10 @@ export function BlogPostDetail() {
             {/* Header Image */}
             {post.headerImage && (
               <div className="mb-12 rounded-lg overflow-hidden -mx-8 lg:-mx-12">
-                <img 
-                  src={post.headerImage} 
+                <BlurImage
+                  src={post.headerImage}
                   alt={post.title}
-                  className="w-full h-auto max-h-[400px] object-cover"
+                  className="w-full max-h-[400px]"
                 />
               </div>
             )}
@@ -245,7 +248,7 @@ export function BlogPostDetail() {
                   const text = paragraph.replace('## ', '');
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                   return (
-                    <h2 key={index} id={id} className="text-3xl mt-12 mb-6 text-slate-900 dark:text-white scroll-mt-24">
+                    <h2 key={index} id={id} className="text-3xl mt-12 mb-6 text-slate-900 dark:text-white scroll-mt-24 font-serif">
                       {text}
                     </h2>
                   );
@@ -254,21 +257,64 @@ export function BlogPostDetail() {
                   const text = paragraph.replace('### ', '');
                   const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                   return (
-                    <h3 key={index} id={id} className="text-2xl mt-8 mb-4 text-slate-900 dark:text-white scroll-mt-24">
+                    <h3 key={index} id={id} className="text-2xl mt-8 mb-4 text-slate-900 dark:text-white scroll-mt-24 font-serif">
                       {text}
                     </h3>
                   );
                 }
-                
+
+                // Handle blockquotes
+                if (paragraph.startsWith('> ')) {
+                  const text = paragraph.replace(/^> /gm, '');
+                  return (
+                    <blockquote key={index} className="border-l-4 border-[#d9653a] pl-6 my-8 italic text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                      {parseMarkdown(text)}
+                    </blockquote>
+                  );
+                }
+
+                // Handle unordered lists
+                if (paragraph.match(/^[-*] /m)) {
+                  const items = paragraph.split('\n').filter(line => line.match(/^[-*] /));
+                  return (
+                    <ul key={index} className="list-disc list-outside pl-6 mb-6 space-y-2">
+                      {items.map((item, i) => (
+                        <li key={i} className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                          {parseMarkdown(item.replace(/^[-*] /, ''))}
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+
+                // Handle ordered lists
+                if (paragraph.match(/^\d+\. /m)) {
+                  const items = paragraph.split('\n').filter(line => line.match(/^\d+\. /));
+                  return (
+                    <ol key={index} className="list-decimal list-outside pl-6 mb-6 space-y-2">
+                      {items.map((item, i) => (
+                        <li key={i} className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+                          {parseMarkdown(item.replace(/^\d+\. /, ''))}
+                        </li>
+                      ))}
+                    </ol>
+                  );
+                }
+
+                // Handle horizontal rules
+                if (paragraph.trim() === '---' || paragraph.trim() === '***') {
+                  return <hr key={index} className="my-10 border-slate-200 dark:border-[#4a4a4a]" />;
+                }
+
                 // Handle regular paragraphs with markdown formatting
                 if (paragraph.trim()) {
                   return (
-                    <p key={index} className="text-lg text-slate-700 dark:text-white leading-relaxed mb-6">
+                    <p key={index} className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
                       {parseMarkdown(paragraph)}
                     </p>
                   );
                 }
-                
+
                 return null;
               })}
             </div>

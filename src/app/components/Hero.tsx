@@ -20,7 +20,7 @@ export function Hero() {
               Aris Karnezis
             </h1>
             
-            <p className="text-xl text-slate-600 dark:text-white leading-relaxed font-[Manrope] text-justify">I use applied mathematics to model complex physical and engineered systems, bridging mathematics, physics, programming and intelligent systems.</p>
+            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-[Manrope] text-justify">I use applied mathematics to model complex physical and engineered systems, bridging mathematics, physics, programming and intelligent systems.</p>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <Button size="lg" className="gap-2" asChild>

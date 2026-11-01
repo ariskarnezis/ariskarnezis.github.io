@@ -1,7 +1,9 @@
-import { GraduationCap, Award, BookOpen, Target, MapPin, Calendar, Download } from "lucide-react";
+import { GraduationCap, Award, BookOpen, Target, MapPin, Calendar, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { SEOHelmet } from "./SEOHelmet";
+
+const CV_URL = "https://drive.proton.me/urls/P1DGV8A3CR#PtoLC3qcshda";
 
 export function AboutPage() {
   return (
@@ -14,7 +16,7 @@ export function AboutPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl mb-6 text-slate-900 dark:text-white">About Me</h1>
-            <p className="text-xl text-slate-600 dark:text-white max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
               A journey through mathematics, physics, and the pursuit of understanding complex systems
             </p>
           </div>
@@ -32,17 +34,17 @@ export function AboutPage() {
                   className="bg-[#d9653a] hover:bg-[#c25532] text-white"
                 >
                   <a
-                    href="https://drive.proton.me/urls/P1DGV8A3CR#PtoLC3qcshda"
+                    href={CV_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <Download className="w-5 h-5" />
-                    Download CV
+                    <ExternalLink className="w-5 h-5" />
+                    View CV
                   </a>
                 </Button>
               </CardHeader>
-              <CardContent className="space-y-4 text-slate-700 dark:text-white text-justify leading-relaxed">
+              <CardContent className="space-y-4 text-slate-700 dark:text-slate-300 text-justify leading-relaxed">
                 <p>
                   I'm a Research Associate specializing in applied mathematics, with a focus on modeling complex physical 
                   and engineered systems. My work bridges the gap between theoretical mathematics, physics, and practical 
@@ -86,10 +88,10 @@ export function AboutPage() {
                         <Calendar className="w-4 h-4" />
                         September 2019 - August 2023
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         <strong>Dynamics Research Group</strong>
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         Thesis: <em>"Waves in disordered particulate materials: transmission and inter-particle correlations"</em>
                       </p>
                       <p className="text-slate-600 dark:text-slate-300">
@@ -116,10 +118,10 @@ export function AboutPage() {
                         <Calendar className="w-4 h-4" />
                         September 2018 - August 2019
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         <strong>EPic Laboratory</strong>
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         Thesis: <em>"THz superfocusing in complex scattering media"</em>
                       </p>
                       <p className="text-slate-600 dark:text-slate-300">
@@ -146,10 +148,10 @@ export function AboutPage() {
                         <Calendar className="w-4 h-4" />
                         September 2012 - March 2018
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         <strong>Specialisation in Sciences</strong>
                       </p>
-                      <p className="text-slate-700 dark:text-white mb-2">
+                      <p className="text-slate-700 dark:text-slate-300 mb-2">
                         Thesis: <em>"Quantum Hydrodynamics near caustics"</em>
                       </p>
                       <p className="text-slate-600 dark:text-slate-300">
@@ -173,7 +175,7 @@ export function AboutPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-3">Wave Mechanics & Acoustics</h3>
-                    <ul className="space-y-2 text-slate-700 dark:text-white">
+                    <ul className="space-y-2 text-slate-700 dark:text-slate-300">
                       <li className="flex items-start gap-2">
                         <span className="text-[#d9653a] mt-1">•</span>
                         <span>Wave propagation and scattering</span>
@@ -191,7 +193,7 @@ export function AboutPage() {
                   
                   <div>
                     <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-3">Sensor Technologies</h3>
-                    <ul className="space-y-2 text-slate-700 dark:text-white">
+                    <ul className="space-y-2 text-slate-700 dark:text-slate-300">
                       <li className="flex items-start gap-2">
                         <span className="text-[#d9653a] mt-1">•</span>
                         <span>Optical and quantum technologies</span>
@@ -209,7 +211,7 @@ export function AboutPage() {
                   
                   <div>
                     <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-3">Signal Processing & Optimization</h3>
-                    <ul className="space-y-2 text-slate-700 dark:text-white">
+                    <ul className="space-y-2 text-slate-700 dark:text-slate-300">
                       <li className="flex items-start gap-2">
                         <span className="text-[#d9653a] mt-1">•</span>
                         <span>Signal processing techniques</span>
@@ -227,7 +229,7 @@ export function AboutPage() {
                   
                   <div>
                     <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-3">Robotics & Localisation</h3>
-                    <ul className="space-y-2 text-slate-700 dark:text-white">
+                    <ul className="space-y-2 text-slate-700 dark:text-slate-300">
                       <li className="flex items-start gap-2">
                         <span className="text-[#d9653a] mt-1">•</span>
                         <span>Simultaneous Localization and Mapping (SLAM)</span>
@@ -321,7 +323,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">January 2025 - Present</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Research Associate</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield - Department of Electrical and Electronic Engineering
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -333,7 +335,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">June 2024 - December 2024</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Research Associate</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield - Department of Electrical and Electronic Engineering
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -345,7 +347,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-green-600 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">April 2024 - May 2024</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Research Assistant</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield - Department of Automatic Control and Systems Engineering
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -369,7 +371,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-purple-600 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">September 2019 - August 2023</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">PhD Researcher</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield - Department of Mechanical Engineering
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -381,7 +383,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-purple-500 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">June 2023 - August 2023</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Research Assistant</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -393,7 +395,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-orange-600 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">February 2022 - March 2022</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Research Assistant</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield - Department of Mechanical Engineering
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
@@ -417,7 +419,7 @@ export function AboutPage() {
                 <div className="absolute -left-10 w-4 h-4 bg-pink-600 rounded-full border-4 border-white dark:border-[#2d2d2d]"></div>
                 <div className="mb-1 text-slate-500 dark:text-slate-400">February 2020 - June 2023</div>
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Graduate Teaching Assistant</h3>
-                <p className="text-slate-700 dark:text-white">
+                <p className="text-slate-700 dark:text-slate-300">
                   University of Sheffield
                 </p>
                 <p className="text-slate-600 dark:text-slate-300 mt-2 text-sm">
