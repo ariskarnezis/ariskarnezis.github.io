@@ -16,11 +16,11 @@ export function Hero() {
               Research Associate
             </div>
             
-            <h1 className="text-5xl md:text-6xl tracking-tight text-slate-900 dark:text-white font-bold font-[Manrope] font-normal">
+            <h1 className="text-5xl md:text-6xl tracking-tight text-slate-900 dark:text-white font-bold">
               Aris Karnezis
             </h1>
             
-            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-[Manrope] text-justify">I use applied mathematics to model complex physical and engineered systems, bridging mathematics, physics, programming and intelligent systems.</p>
+            <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed text-justify">I use applied mathematics to model complex physical and engineered systems, bridging mathematics, physics, programming and intelligent systems.</p>
             
             <div className="flex flex-wrap gap-4 pt-4">
               <Button size="lg" className="gap-2" asChild>
