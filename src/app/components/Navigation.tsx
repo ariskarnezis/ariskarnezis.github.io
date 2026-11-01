@@ -209,6 +209,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <GlobalSearch />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors"
