@@ -70,7 +70,7 @@ export function Contact() {
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl mb-4 text-slate-900 dark:text-white">Get in Touch</h2>
-          <p className="text-xl text-slate-600 dark:text-white max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Interested in collaboration, have questions, or just want to connect? I'd love to hear from you.
           </p>
         </div>

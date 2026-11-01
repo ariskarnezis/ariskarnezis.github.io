@@ -1,32 +1,53 @@
 import { Link } from "react-router";
-import { User, FlaskConical, FileText, Mail, Mic, Github, Linkedin, GraduationCap, Download } from "lucide-react";
-import { RSSFeedLinks } from "./RSSFeedLinks";
+import { User, FlaskConical, FileText, Mail, Mic, Github, Linkedin, GraduationCap, Download, Rss } from "lucide-react";
+import {
+  generateCombinedRSS,
+  downloadRSSFeed,
+} from '../utils/generateRSS';
 
 export function Footer() {
-  // Function to handle smooth scroll when clicking footer links
   const handleLinkClick = (sectionId: string) => {
-    // If we're on the homepage, just scroll
     if (window.location.pathname === '/') {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    // Otherwise, navigate to home with hash (will be handled by Home component)
   };
 
   return (
-    <footer className="bg-[#2d2d2d] dark:bg-[#2d2d2d] text-slate-300 dark:text-slate-400 py-12 border-t border-[#4a4a4a] dark:border-[#4a4a4a]">
+    <footer className="bg-[#2d2d2d] text-slate-400 py-12 border-t border-[#4a4a4a]">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-white text-lg mb-4">Aris Karnezis</h3>
-            <p className="text-sm">
+            <p className="text-sm leading-relaxed">
               Research Associate specialising in applied and computational mathematics, sensor technology
-              and machine learning. Passionate about science communication and collaborative research.
+              and machine learning.
             </p>
+            <div className="flex gap-3 mt-4">
+              <a href="https://github.com/akarnezis" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#3a3a3a] hover:bg-[#4a4a4a] text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
+                <Github size={16} />
+              </a>
+              <a href="https://www.linkedin.com/in/aris-karnezis-595777b5/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#3a3a3a] hover:bg-[#4a4a4a] text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                <Linkedin size={16} />
+              </a>
+              <a href="https://scholar.google.com/citations?user=E3y4MmEAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#3a3a3a] hover:bg-[#4a4a4a] text-slate-400 hover:text-white transition-colors" aria-label="Google Scholar">
+                <GraduationCap size={16} />
+              </a>
+              <button
+                onClick={() => {
+                  const content = generateCombinedRSS();
+                  downloadRSSFeed(content, 'feed.xml');
+                }}
+                className="p-2 rounded-lg bg-[#3a3a3a] hover:bg-[#4a4a4a] text-slate-400 hover:text-white transition-colors"
+                aria-label="RSS Feed"
+              >
+                <Rss size={16} />
+              </button>
+            </div>
           </div>
-          
+
           <div>
             <h4 className="text-white mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
@@ -56,7 +77,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
@@ -67,39 +88,17 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/akarnezis" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
-                  <Github className="inline-block mr-2" size={16} />
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/aris-karnezis-595777b5/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
-                  <Linkedin className="inline-block mr-2" size={16} />
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="https://scholar.google.com/citations?user=E3y4MmEAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
-                  <GraduationCap className="inline-block mr-2" size={16} />
-                  Google Scholar
-                </a>
-              </li>
-              <li>
                 <a href="https://drive.proton.me/urls/P1DGV8A3CR#PtoLC3qcshda" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition-colors">
                   <Download className="inline-block mr-2" size={16} />
-                  CV/Resume
+                  CV / Resume
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div className="pt-8 border-t border-[#4a4a4a] mb-6">
-          <RSSFeedLinks />
-        </div>
 
         <div className="pt-6 border-t border-[#4a4a4a] text-center text-sm">
-          <p>&copy; 2025 Aris Karnezis. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Aris Karnezis. All rights reserved.</p>
         </div>
       </div>
     </footer>

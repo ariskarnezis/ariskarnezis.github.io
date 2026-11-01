@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import { useTheme } from "../contexts/ThemeContext";
 import { useHomePageReset } from "../contexts/HomePageResetContext";
+import { GlobalSearch } from "./GlobalSearch";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -184,6 +185,7 @@ export function Navigation() {
                 </a>
               )
             )}
+            <GlobalSearch />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition-colors"

@@ -86,7 +86,7 @@ export function Projects() {
           <h2 className="text-4xl mb-4 text-slate-900 dark:text-white">
             {filterMode === "publications" ? "Publications" : "Research Projects"}
           </h2>
-          <p className="text-xl text-slate-600 dark:text-white max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             {filterMode === "publications" 
               ? "Peer-reviewed publications and research outputs from my academic work"
               : "A selection of collaborative research initiatives I've contributed to throughout my academic career"
@@ -164,7 +164,7 @@ export function Projects() {
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
-                  <p className="text-slate-700 dark:text-white">{project.description}</p>
+                  <p className="text-slate-700 dark:text-slate-300">{project.description}</p>
                   
                   <div>
                     <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">{project.institution}</p>

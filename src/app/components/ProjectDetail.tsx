@@ -119,7 +119,7 @@ export function ProjectDetail() {
               
               <h1 className="text-4xl text-slate-900 dark:text-white font-serif">{project.title}</h1>
               
-              <p className="text-xl text-slate-600 dark:text-white">{project.institution}</p>
+              <p className="text-xl text-slate-600 dark:text-slate-300">{project.institution}</p>
               
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, index) => (
@@ -158,7 +158,7 @@ export function ProjectDetail() {
             {/* Overview */}
             <div id="overview" className="prose max-w-none scroll-mt-24">
               <h2 className="text-2xl text-slate-900 dark:text-white mb-4">Overview</h2>
-              <p className="text-lg text-slate-700 dark:text-white whitespace-pre-line">
+              <p className="text-lg text-slate-700 dark:text-slate-300 whitespace-pre-line">
                 {project.detailedDescription}
               </p>
             </div>
@@ -170,7 +170,7 @@ export function ProjectDetail() {
                 {project.objectives.map((objective, index) => (
                   <li key={index} className="flex gap-3">
                     <span className="text-[#2b3137] dark:text-[#d9653a] mt-1">•</span>
-                    <span className="text-slate-700 dark:text-white">{objective}</span>
+                    <span className="text-slate-700 dark:text-slate-300">{objective}</span>
                   </li>
                 ))}
               </ul>
@@ -179,7 +179,7 @@ export function ProjectDetail() {
             {/* Methodology */}
             <div id="methodology" className="space-y-4 scroll-mt-24">
               <h2 className="text-2xl text-slate-900 dark:text-white">Methodology</h2>
-              <p className="text-slate-700 dark:text-white">{project.methodology}</p>
+              <p className="text-slate-700 dark:text-slate-300">{project.methodology}</p>
             </div>
 
             {/* Results */}
@@ -189,7 +189,7 @@ export function ProjectDetail() {
                 {project.results.map((result, index) => (
                   <li key={index} className="flex gap-3">
                     <span className="text-[#2b3137] dark:text-[#d9653a] mt-1">•</span>
-                    <MathText className="text-slate-700 dark:text-white">{result}</MathText>
+                    <MathText className="text-slate-700 dark:text-slate-300">{result}</MathText>
                   </li>
                 ))}
               </ul>
@@ -222,18 +222,18 @@ export function ProjectDetail() {
                     // Check if publication contains a URL
                     const urlMatch = publication.match(/(https?:\/\/[^\s]+)/);
                     const url = urlMatch ? urlMatch[0] : null;
-                    const textBeforeUrl = url ? publication.substring(0, publication.indexOf(url)).replace(/\s*-\s*$/, '').trim() : publication;
+                    const textBeforeUrl = url ? publication.substring(0, publication.indexOf(url)).replace(/\s*[—–\-]\s*$/, '').trim() : publication;
                     
                     return (
                       <li key={index} className="flex gap-3">
                         <span className="text-[#2b3137] dark:text-[#d9653a] mt-1">•</span>
-                        <span className="text-slate-700 dark:text-white text-sm">
+                        <span className="text-slate-700 dark:text-slate-300 text-sm">
                           {url ? (
                             <a 
                               href={url} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="text-slate-700 dark:text-white underline hover:text-[#d9653a] dark:hover:text-[#d9653a] transition-colors"
+                              className="text-slate-700 dark:text-slate-300 underline hover:text-[#d9653a] dark:hover:text-[#d9653a] transition-colors"
                             >
                               {textBeforeUrl}
                             </a>
